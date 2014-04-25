@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Content!</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script>
+			window.onload = function()
+			{
+				$('#btnComplete').click(transferText);
+			}
+
+			function transferText()
+			{
+				$('#result').text($('#textarea').val());
+				$('#textarea').val('');
+				$('#textarea').attr("disabled","disabled"); 
+			}
+		</script>
+		<style>
+			#container
+			{
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div data-role="fieldcontain">
+				<label for="textarea">Tell Us About You:</label>
+			<textarea cols="40" rows="8"  id="textarea"></textarea>
+			</div>
+			<button id="btnComplete">Complete</button>
+			<div id="result"></div>
+		<div> <!-- container -->
+	</body>
+
+</html>

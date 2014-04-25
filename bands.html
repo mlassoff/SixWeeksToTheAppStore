@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Demos</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script>
+			window.onload = function()
+			{
+				$('#divWrong, #divRight').hide();
+
+				$('#btnChicago, #btnREO, #btnBeatles, #btnRolling').click(wrong);
+
+				$('#btnMoody').click(right);
+
+			}
+			function right()
+			{
+				$('#divWrong').hide();
+				$('#divRight').show();
+			}
+
+			function wrong()
+			{
+				$('#divRight').hide();
+				$('#divWrong').show();
+			}
+
+		</script>
+		<style>
+			#divWrong
+			{
+				background-color: red;
+				text-align: center;
+				color: white;
+			}
+
+			#divRight
+			{
+				background-color: green;
+				text-align: center;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="question">
+			<h2>What is the only band to go 20 years between number one hit songs, according to Billboard?</h2>
+		</div>
+		<button id="btnChicago">Chicago</button>
+		<button id="btnREO">REO Speedwagon</button>
+		<button id="btnBeatles">Beatles</button>
+		<button id="btnMoody">Moody Blues</button>
+		<button id="btnRolling">Rolling Stones</button>
+		<div id="divWrong">
+			<h2>WRONG</h2>
+		</div>
+		<div id="divRight">
+			<h2>RIGHT!</h2>
+		</div>
+		<h2>Mark's Quiz Show</h2>
+	</body>
+</html>
